@@ -23,5 +23,14 @@ namespace NutriTrack
             home.Show();
             this.Hide();
         }
+
+        private void ButtonExportDataFoodManagem_Click(object sender, EventArgs e)
+        {
+            ExportDialogcs exportDialogcs= new ExportDialogcs();
+            exportDialogcs.Show();
+            this.Hide();
+        }
+
+       
     }
 }
