@@ -82,8 +82,8 @@
             this.SodiumColimn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.buttonBackFoodManagem = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -620,17 +620,6 @@
             this.panel1.Size = new System.Drawing.Size(1903, 99);
             this.panel1.TabIndex = 6;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(133, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 41);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "NitriTrak";
-            // 
             // buttonBackFoodManagem
             // 
             this.buttonBackFoodManagem.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -641,6 +630,17 @@
             this.buttonBackFoodManagem.Text = "Back";
             this.buttonBackFoodManagem.UseVisualStyleBackColor = true;
             this.buttonBackFoodManagem.Click += new System.EventHandler(this.buttonBackFoodManagem_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(133, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 41);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "NitriTrak";
             // 
             // FoodManagementForm
             // 
