@@ -10,16 +10,18 @@ using System.Windows.Forms;
 
 namespace NutriTrack
 {
-    public partial class Form1 : Form
+    public partial class AboutForm : Form
     {
-        public Form1()
+        public AboutForm()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void buttonBackAbout_Click(object sender, EventArgs e)
         {
-
+            Home home = new Home();
+            home.Show();
+            this.Hide();
         }
     }
 }
