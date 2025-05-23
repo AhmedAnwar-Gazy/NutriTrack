@@ -51,5 +51,12 @@ namespace NutriTrack
             nutrientVisualizationForm.Show();
             this.Hide();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Ai ai = new Ai();
+            ai.Show();
+            
+        }
     }
 }

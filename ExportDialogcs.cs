@@ -18,8 +18,9 @@ namespace NutriTrack
 {
     public partial class ExportDialogcs : Form
     {
-        public ExportDialogcs()
-        {
+        private ListView myView;
+        public ExportDialogcs(ListView items)
+        {  this.myView=items;
             InitializeComponent();
         }
 
@@ -30,13 +31,11 @@ namespace NutriTrack
             this.Hide();
         }
 
-
-        public void ExportToPDF(
-    List<(DataGridView grid, List<string> columns)> grids,
+       public void ExportToPDF(
+    List<(ListView listView, List<string> columns)> listViews,
     List<Chart> charts,
     List<string> paragraphs)
 {
-    // Let user choose file path with default name
     SaveFileDialog saveFileDialog = new SaveFileDialog();
     string defaultFileName = $"Report_{DateTime.Now:dd-MMM-yyyy_HH-mm}.pdf";
     saveFileDialog.FileName = defaultFileName;
@@ -66,28 +65,36 @@ namespace NutriTrack
             }
         }
 
-        // Add DataGrids
-        if (grids != null)
+        // Add ListView tables
+        if (listViews != null)
         {
-            foreach (var (grid, columns) in grids)
+            foreach (var (listView, columns) in listViews)
             {
-                if (grid == null) continue;
+                if (listView == null || columns == null || columns.Count == 0)
+                    continue;
 
                 var pdfTable = new PdfPTable(columns.Count);
                 pdfTable.WidthPercentage = 100;
 
+                // Add column headers
                 foreach (var colName in columns)
                 {
                     pdfTable.AddCell(new Phrase(colName));
                 }
 
-                foreach (DataGridViewRow row in grid.Rows)
+                // Add data rows
+                foreach (ListViewItem item in listView.Items)
                 {
-                    if (row.IsNewRow) continue;
-
                     foreach (var colName in columns)
                     {
-                        var cellValue = row.Cells[colName]?.Value?.ToString() ?? "";
+                        int colIndex = listView.Columns.IndexOfKey(colName);
+                        if (colIndex == -1 && int.TryParse(colName, out int numIndex))
+                            colIndex = numIndex;
+
+                        string cellValue = (colIndex >= 0 && colIndex < item.SubItems.Count)
+                            ? item.SubItems[colIndex].Text
+                            : "";
+
                         pdfTable.AddCell(new Phrase(cellValue));
                     }
                 }
@@ -97,7 +104,7 @@ namespace NutriTrack
             }
         }
 
-        // Add Charts
+        // Add charts
         if (charts != null)
         {
             foreach (var chart in charts)
@@ -126,7 +133,6 @@ namespace NutriTrack
         pdfDoc.Close();
     }
 
-
     try
     {
         Process.Start(new ProcessStartInfo
@@ -137,11 +143,20 @@ namespace NutriTrack
     }
     catch (Exception ex)
     {
-        MessageBox.Show($"PDF created but could not be opened automatically😁😁: {ex.Message}");
+        MessageBox.Show($"PDF created but could not be opened automatically 😁😁: {ex.Message}");
     }
 }
 
-        
-        
+
+private void button1_Click(object sender, EventArgs e)
+{var exportData = new List<(ListView, List<string>)>
+    {
+        (myView, new List<string> { "0", "1", "2" }) // using column indexes or names
+    };
+    if (radioButton2.Checked)
+    {
+        ExportToPDF(exportData, null, new List<string> { "This is a test report." });
+    }
+}
     }
 }

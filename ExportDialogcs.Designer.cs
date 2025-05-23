@@ -88,7 +88,6 @@
             this.checkBox2.TabIndex = 8;
             this.checkBox2.Text = "cbxIncludeMicronutrients";
             this.checkBox2.UseVisualStyleBackColor = true;
-
             // 
             // checkBox1
             // 
@@ -172,6 +171,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "Export";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 

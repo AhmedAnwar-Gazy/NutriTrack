@@ -68,18 +68,18 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.TextNameColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ServingSizeColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.CaloriesColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.CaebsColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ProteinColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.FatColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.FiberColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.VitAColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.VitCColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.IronColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.CalciumColumn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.SodiumColimn = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.TextNameColumn = new System.Windows.Forms.ColumnHeader();
+            this.ServingSizeColumn = new System.Windows.Forms.ColumnHeader();
+            this.CaloriesColumn = new System.Windows.Forms.ColumnHeader();
+            this.CaebsColumn = new System.Windows.Forms.ColumnHeader();
+            this.ProteinColumn = new System.Windows.Forms.ColumnHeader();
+            this.FatColumn = new System.Windows.Forms.ColumnHeader();
+            this.FiberColumn = new System.Windows.Forms.ColumnHeader();
+            this.VitAColumn = new System.Windows.Forms.ColumnHeader();
+            this.VitCColumn = new System.Windows.Forms.ColumnHeader();
+            this.IronColumn = new System.Windows.Forms.ColumnHeader();
+            this.CalciumColumn = new System.Windows.Forms.ColumnHeader();
+            this.SodiumColimn = new System.Windows.Forms.ColumnHeader();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.buttonBackFoodManagem = new System.Windows.Forms.Button();
@@ -197,6 +197,7 @@
             this.ButtonUpdateFoodFoodManagem.TabIndex = 4;
             this.ButtonUpdateFoodFoodManagem.Text = "UpdateFood";
             this.ButtonUpdateFoodFoodManagem.UseVisualStyleBackColor = false;
+            this.ButtonUpdateFoodFoodManagem.Click += new System.EventHandler(this.ButtonUpdateFoodFoodManagem_Click);
             // 
             // ButtonDeleteFoodFoodManagem
             // 
@@ -211,6 +212,7 @@
             this.ButtonDeleteFoodFoodManagem.TabIndex = 3;
             this.ButtonDeleteFoodFoodManagem.Text = "Delete Food";
             this.ButtonDeleteFoodFoodManagem.UseVisualStyleBackColor = false;
+            this.ButtonDeleteFoodFoodManagem.Click += new System.EventHandler(this.ButtonDeleteFoodFoodManagem_Click);
             // 
             // ButtonViewNutrientsFoodManagem
             // 
@@ -240,6 +242,7 @@
             this.ButtonClearFoodFoodManagem.TabIndex = 1;
             this.ButtonClearFoodFoodManagem.Text = "Clear";
             this.ButtonClearFoodFoodManagem.UseVisualStyleBackColor = false;
+            this.ButtonClearFoodFoodManagem.Click += new System.EventHandler(this.ButtonClearFoodFoodManagem_Click);
             // 
             // ButtonAddFoodFoodManagem
             // 
@@ -541,24 +544,13 @@
             // 
             // listView1
             // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.TextNameColumn,
-            this.ServingSizeColumn,
-            this.CaloriesColumn,
-            this.CaebsColumn,
-            this.ProteinColumn,
-            this.FatColumn,
-            this.FiberColumn,
-            this.VitAColumn,
-            this.VitCColumn,
-            this.IronColumn,
-            this.CalciumColumn,
-            this.SodiumColimn});
+            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { this.TextNameColumn, this.ServingSizeColumn, this.CaloriesColumn, this.CaebsColumn, this.ProteinColumn, this.FatColumn, this.FiberColumn, this.VitAColumn, this.VitCColumn, this.IronColumn, this.CalciumColumn, this.SodiumColimn });
+            this.listView1.FullRowSelect = true;
             this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(67, 115);
+            this.listView1.Location = new System.Drawing.Point(50, 107);
             this.listView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(1135, 344);
+            this.listView1.Size = new System.Drawing.Size(1135, 377);
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -689,7 +681,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion
