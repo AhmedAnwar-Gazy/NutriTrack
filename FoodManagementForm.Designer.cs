@@ -641,10 +641,16 @@
             // buttonBackFoodManagem
             // 
             this.buttonBackFoodManagem.Font = new System.Drawing.Font("Tahoma", 12F);
+<<<<<<< HEAD
+            this.buttonBackFoodManagem.Location = new System.Drawing.Point(1498, 28);
+            this.buttonBackFoodManagem.Name = "buttonBackFoodManagem";
+            this.buttonBackFoodManagem.Size = new System.Drawing.Size(242, 57);
+=======
             this.buttonBackFoodManagem.Location = new System.Drawing.Point(1284, 23);
             this.buttonBackFoodManagem.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBackFoodManagem.Name = "buttonBackFoodManagem";
             this.buttonBackFoodManagem.Size = new System.Drawing.Size(207, 46);
+>>>>>>> f21a5d71f0613325ae03f87a196a87d15b86eb81
             this.buttonBackFoodManagem.TabIndex = 11;
             this.buttonBackFoodManagem.Text = "Back";
             this.buttonBackFoodManagem.UseVisualStyleBackColor = true;
@@ -655,9 +661,15 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 20F);
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+<<<<<<< HEAD
+            this.label1.Location = new System.Drawing.Point(133, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 41);
+=======
             this.label1.Location = new System.Drawing.Point(114, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(117, 33);
+>>>>>>> f21a5d71f0613325ae03f87a196a87d15b86eb81
             this.label1.TabIndex = 0;
             this.label1.Text = "NitriTrak";
             // 

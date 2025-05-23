@@ -54,8 +54,8 @@
             this.TextboxFullNameProfile = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.buttonBackProfile = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -335,17 +335,6 @@
             this.panel1.Size = new System.Drawing.Size(1903, 110);
             this.panel1.TabIndex = 9;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(133, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 41);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "NitriTrak";
-            // 
             // buttonBackProfile
             // 
             this.buttonBackProfile.Font = new System.Drawing.Font("Tahoma", 12F);
@@ -356,6 +345,17 @@
             this.buttonBackProfile.Text = "Back";
             this.buttonBackProfile.UseVisualStyleBackColor = true;
             this.buttonBackProfile.Click += new System.EventHandler(this.buttonBackProfile_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label1.Location = new System.Drawing.Point(133, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 41);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "NitriTrak";
             // 
             // ProfileForm
             // 
