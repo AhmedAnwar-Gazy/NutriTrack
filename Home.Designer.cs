@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.contentPanel = new System.Windows.Forms.Panel();
+            this.SuggestionsListBox = new System.Windows.Forms.ListBox();
+            this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.SearchTextBox = new System.Windows.Forms.TextBox();
-            this.comboBoxHome = new System.Windows.Forms.ComboBox();
             this.ButtonSearchViewNuData = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -50,7 +50,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.SuggestionsListBox = new System.Windows.Forms.ListBox();
             this.contentPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -69,7 +68,6 @@
             this.contentPanel.Controls.Add(this.SearchTextBox);
             this.contentPanel.Controls.Add(this.label4);
             this.contentPanel.Controls.Add(this.label3);
-            this.contentPanel.Controls.Add(this.comboBoxHome);
             this.contentPanel.Controls.Add(this.ButtonSearchViewNuData);
             this.contentPanel.Controls.Add(this.label2);
             this.contentPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -79,6 +77,24 @@
             this.contentPanel.Size = new System.Drawing.Size(1518, 609);
             this.contentPanel.TabIndex = 12;
             this.contentPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // SuggestionsListBox
+            // 
+            this.SuggestionsListBox.FormattingEnabled = true;
+            this.SuggestionsListBox.Location = new System.Drawing.Point(383, 490);
+            this.SuggestionsListBox.Name = "SuggestionsListBox";
+            this.SuggestionsListBox.Size = new System.Drawing.Size(414, 95);
+            this.SuggestionsListBox.TabIndex = 8;
+            // 
+            // SearchTextBox
+            // 
+            this.SearchTextBox.Location = new System.Drawing.Point(383, 440);
+            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.SearchTextBox.Multiline = true;
+            this.SearchTextBox.Name = "SearchTextBox";
+            this.SearchTextBox.Size = new System.Drawing.Size(637, 36);
+            this.SearchTextBox.TabIndex = 5;
+            this.SearchTextBox.TextChanged += new System.EventHandler(this.textBoxSearchHome_TextChanged);
             // 
             // label4
             // 
@@ -104,26 +120,6 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Welcome ";
             // 
-            // SearchTextBox
-            // 
-            this.SearchTextBox.Location = new System.Drawing.Point(383, 440);
-            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.SearchTextBox.Multiline = true;
-            this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(637, 36);
-            this.SearchTextBox.TabIndex = 5;
-            this.SearchTextBox.TextChanged += new System.EventHandler(this.textBoxSearchHome_TextChanged);
-            // 
-            // comboBoxHome
-            // 
-            this.comboBoxHome.Font = new System.Drawing.Font("Tahoma", 18F);
-            this.comboBoxHome.FormattingEnabled = true;
-            this.comboBoxHome.Location = new System.Drawing.Point(1047, 440);
-            this.comboBoxHome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxHome.Name = "comboBoxHome";
-            this.comboBoxHome.Size = new System.Drawing.Size(104, 37);
-            this.comboBoxHome.TabIndex = 4;
-            // 
             // ButtonSearchViewNuData
             // 
             this.ButtonSearchViewNuData.BackColor = System.Drawing.Color.SteelBlue;
@@ -131,7 +127,7 @@
             this.ButtonSearchViewNuData.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonSearchViewNuData.Font = new System.Drawing.Font("Tahoma", 12F);
             this.ButtonSearchViewNuData.ForeColor = System.Drawing.Color.White;
-            this.ButtonSearchViewNuData.Location = new System.Drawing.Point(1157, 440);
+            this.ButtonSearchViewNuData.Location = new System.Drawing.Point(1083, 440);
             this.ButtonSearchViewNuData.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ButtonSearchViewNuData.Name = "ButtonSearchViewNuData";
             this.ButtonSearchViewNuData.Size = new System.Drawing.Size(166, 36);
@@ -356,14 +352,6 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // SuggestionsListBox
-            // 
-            this.SuggestionsListBox.FormattingEnabled = true;
-            this.SuggestionsListBox.Location = new System.Drawing.Point(383, 490);
-            this.SuggestionsListBox.Name = "SuggestionsListBox";
-            this.SuggestionsListBox.Size = new System.Drawing.Size(414, 95);
-            this.SuggestionsListBox.TabIndex = 8;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -398,7 +386,6 @@
         private System.Windows.Forms.Panel contentPanel;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox SearchTextBox;
-        private System.Windows.Forms.ComboBox comboBoxHome;
         private System.Windows.Forms.Button ButtonSearchViewNuData;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
