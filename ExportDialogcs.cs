@@ -22,6 +22,8 @@ namespace NutriTrack
         public ExportDialogcs(ListView items)
         {  this.myView=items;
             InitializeComponent();
+            this.WindowState = FormWindowState.Maximized; // يفتح النافذة بحجم متكامل
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -158,5 +160,10 @@ private void button1_Click(object sender, EventArgs e)
         ExportToPDF(exportData, null, new List<string> { "This is a test report." });
     }
 }
+
+        private void ExportDialogcs_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

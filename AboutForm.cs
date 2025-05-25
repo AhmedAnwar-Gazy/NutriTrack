@@ -1,20 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using System;
 using System.Windows.Forms;
 
 namespace NutriTrack
 {
-    public partial class AboutForm : Form
+    public partial class AboutForm : UserControl
     {
         public AboutForm()
         {
             InitializeComponent();
+
         }
 
         private void buttonBackAbout_Click(object sender, EventArgs e)
@@ -22,6 +17,21 @@ namespace NutriTrack
             Home home = new Home();
             home.Show();
             this.Hide();
+        }
+
+        private void AboutForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -10,11 +10,13 @@ using System.Windows.Forms;
 
 namespace NutriTrack
 {
-    public partial class ProfileForm : Form
+    public partial class ProfileForm : UserControl
     {
         public ProfileForm()
         {
             InitializeComponent();
+/*            this.WindowState = FormWindowState.Maximized; // يفتح النافذة بحجم متكامل
+*/
         }
 
         private void ButtonEditProfile_Click(object sender, EventArgs e)
@@ -27,6 +29,16 @@ namespace NutriTrack
             Home home = new Home();
             home.Show();
             this.Hide();
+        }
+
+        private void ProfileForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

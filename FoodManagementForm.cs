@@ -11,12 +11,13 @@ using System.Windows.Forms;
 
 namespace NutriTrack
 {
-    public partial class FoodManagementForm : Form
+    public partial class FoodManagementForm : UserControl
     {
         public FoodManagementForm()
         {
             InitializeComponent();
             loadlistviewitems();
+
         }
 
         private void buttonBackFoodManagem_Click(object sender, EventArgs e)
@@ -35,7 +36,7 @@ namespace NutriTrack
 
         private void loadlistviewitems()
         {
-            using (SqlDataReader read = DatabaseConnection.Instance.ExecuteReader("SELECT * FROM Nutrients"))
+/*            using (SqlDataReader read = DatabaseConnection.Instance.ExecuteReader("SELECT * FROM Nutrients"))
             {
                 while (read.Read())
                 {
@@ -46,7 +47,7 @@ namespace NutriTrack
                     listView.SubItems.Add(read["IsMacronutrient"].ToString());
                     listView1.Items.Add(listView);  
                 }
-            }
+            }*/
         }
         
         
@@ -62,7 +63,7 @@ namespace NutriTrack
 
         private void ButtonClearFoodFoodManagem_Click(object sender, EventArgs e)
         {
-            listView1.SelectedItems.Clear();
+            listView1.Clear();
         }
 
         private void ButtonUpdateFoodFoodManagem_Click(object sender, EventArgs e)
@@ -75,6 +76,36 @@ namespace NutriTrack
                 TextBoxCaloriesFoodManageme.Text=item.SubItems[3].Text;
      
             }
+        }
+
+        private void FoodManagementForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

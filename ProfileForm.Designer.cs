@@ -54,8 +54,6 @@
             this.TextboxFullNameProfile = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonBackProfile = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -63,18 +61,20 @@
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).BeginInit();
             this.groupBox1.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.AutoScroll = true;
+            this.panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.panel2.Controls.Add(this.panel1);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 110);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1903, 1986);
+            this.panel2.Size = new System.Drawing.Size(1924, 889);
             this.panel2.TabIndex = 10;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel3
             // 
@@ -88,9 +88,9 @@
             this.panel3.Controls.Add(this.pictureProfile);
             this.panel3.Controls.Add(this.label2);
             this.panel3.Controls.Add(this.groupBox1);
-            this.panel3.Location = new System.Drawing.Point(400, 22);
+            this.panel3.Location = new System.Drawing.Point(368, 167);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(965, 1759);
+            this.panel3.Size = new System.Drawing.Size(965, 2017);
             this.panel3.TabIndex = 2;
             // 
             // ButtonEditProfile
@@ -325,48 +325,21 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.buttonBackProfile);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1903, 110);
-            this.panel1.TabIndex = 9;
-            // 
-            // buttonBackProfile
-            // 
-            this.buttonBackProfile.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.buttonBackProfile.Location = new System.Drawing.Point(1478, 28);
-            this.buttonBackProfile.Name = "buttonBackProfile";
-            this.buttonBackProfile.Size = new System.Drawing.Size(242, 57);
-            this.buttonBackProfile.TabIndex = 13;
-            this.buttonBackProfile.Text = "Back";
-            this.buttonBackProfile.UseVisualStyleBackColor = true;
-            this.buttonBackProfile.Click += new System.EventHandler(this.buttonBackProfile_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 20F);
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.label1.Location = new System.Drawing.Point(133, 31);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 41);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "NitriTrak";
+            this.panel1.Size = new System.Drawing.Size(330, 2184);
+            this.panel1.TabIndex = 3;
             // 
             // ProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1924, 889);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Name = "ProfileForm";
-            this.Text = "ProfileForm";
+            this.Size = new System.Drawing.Size(1924, 889);
+            this.Load += new System.EventHandler(this.ProfileForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
@@ -379,8 +352,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureProfile)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -413,7 +384,5 @@
         private System.Windows.Forms.TextBox TextboxFullNameProfile;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button buttonBackProfile;
     }
 }
