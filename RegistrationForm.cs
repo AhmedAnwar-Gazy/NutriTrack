@@ -90,10 +90,14 @@ namespace NutriTrack
             }
         }
 
+        private void RegistrationForm_Load(object sender, EventArgs e)
+        {
 
+        }
 
+        private void label13_Click(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }

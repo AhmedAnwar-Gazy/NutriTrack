@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.pictureBoxDisplay = new System.Windows.Forms.PictureBox();
+            this.btnBrowseImage = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.TextboxHeightProfile = new System.Windows.Forms.TextBox();
@@ -52,15 +54,15 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.btnBrowseImage = new System.Windows.Forms.Button();
-            this.pictureBoxDisplay = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDisplay)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -74,6 +76,8 @@
             // 
             this.splitContainer1.Panel1.AutoScroll = true;
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
+            this.splitContainer1.Panel1.Controls.Add(this.label13);
+            this.splitContainer1.Panel1.Controls.Add(this.richTextBox1);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBoxDisplay);
             this.splitContainer1.Panel1.Controls.Add(this.btnBrowseImage);
             this.splitContainer1.Panel1.Controls.Add(this.label12);
@@ -105,6 +109,33 @@
             this.splitContainer1.SplitterDistance = 722;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 2;
+            // 
+            // pictureBoxDisplay
+            // 
+            this.pictureBoxDisplay.Location = new System.Drawing.Point(39, 582);
+            this.pictureBoxDisplay.Name = "pictureBoxDisplay";
+            this.pictureBoxDisplay.Size = new System.Drawing.Size(214, 138);
+            this.pictureBoxDisplay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxDisplay.TabIndex = 27;
+            this.pictureBoxDisplay.TabStop = false;
+            // 
+            // btnBrowseImage
+            // 
+            this.btnBrowseImage.BackColor = System.Drawing.Color.LightSeaGreen;
+            this.btnBrowseImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnBrowseImage.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnBrowseImage.FlatAppearance.BorderSize = 0;
+            this.btnBrowseImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBrowseImage.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.btnBrowseImage.ForeColor = System.Drawing.Color.White;
+            this.btnBrowseImage.Location = new System.Drawing.Point(42, 728);
+            this.btnBrowseImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnBrowseImage.Name = "btnBrowseImage";
+            this.btnBrowseImage.Size = new System.Drawing.Size(213, 37);
+            this.btnBrowseImage.TabIndex = 26;
+            this.btnBrowseImage.Text = "UpLoad Image";
+            this.btnBrowseImage.UseVisualStyleBackColor = false;
+            this.btnBrowseImage.Click += new System.EventHandler(this.btnBrowseImage_Click);
             // 
             // label12
             // 
@@ -143,7 +174,7 @@
             this.Login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Login.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.Login.ForeColor = System.Drawing.Color.White;
-            this.Login.Location = new System.Drawing.Point(192, 925);
+            this.Login.Location = new System.Drawing.Point(176, 854);
             this.Login.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Login.Name = "Login";
             this.Login.Size = new System.Drawing.Size(351, 37);
@@ -157,10 +188,10 @@
             this.BacktoLogin.BackColor = System.Drawing.Color.White;
             this.BacktoLogin.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
             this.BacktoLogin.ForeColor = System.Drawing.Color.Black;
-            this.BacktoLogin.Location = new System.Drawing.Point(176, 991);
+            this.BacktoLogin.Location = new System.Drawing.Point(176, 925);
             this.BacktoLogin.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.BacktoLogin.Name = "BacktoLogin";
-            this.BacktoLogin.Size = new System.Drawing.Size(347, 172);
+            this.BacktoLogin.Size = new System.Drawing.Size(351, 40);
             this.BacktoLogin.TabIndex = 13;
             this.BacktoLogin.Text = "Back to Login";
             this.BacktoLogin.UseVisualStyleBackColor = false;
@@ -352,36 +383,28 @@
             this.label7.TabIndex = 0;
             this.label7.Text = "Welcome";
             // 
-            // btnBrowseImage
-            // 
-            this.btnBrowseImage.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.btnBrowseImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnBrowseImage.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnBrowseImage.FlatAppearance.BorderSize = 0;
-            this.btnBrowseImage.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBrowseImage.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
-            this.btnBrowseImage.ForeColor = System.Drawing.Color.White;
-            this.btnBrowseImage.Location = new System.Drawing.Point(42, 728);
-            this.btnBrowseImage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnBrowseImage.Name = "btnBrowseImage";
-            this.btnBrowseImage.Size = new System.Drawing.Size(213, 37);
-            this.btnBrowseImage.TabIndex = 26;
-            this.btnBrowseImage.Text = "UpLoad Image";
-            this.btnBrowseImage.UseVisualStyleBackColor = false;
-            this.btnBrowseImage.Click += new System.EventHandler(this.btnBrowseImage_Click);
-            // 
-            // pictureBoxDisplay
-            // 
-            this.pictureBoxDisplay.Location = new System.Drawing.Point(39, 582);
-            this.pictureBoxDisplay.Name = "pictureBoxDisplay";
-            this.pictureBoxDisplay.Size = new System.Drawing.Size(214, 138);
-            this.pictureBoxDisplay.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxDisplay.TabIndex = 27;
-            this.pictureBoxDisplay.TabStop = false;
-            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(365, 630);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(215, 135);
+            this.richTextBox1.TabIndex = 28;
+            this.richTextBox1.Text = "";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.label13.Location = new System.Drawing.Point(361, 586);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 24);
+            this.label13.TabIndex = 29;
+            this.label13.Text = "Note :";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // RegistrationForm
             // 
@@ -394,14 +417,15 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "RegistrationForm";
             this.Text = "RegistrationForm";
+            this.Load += new System.EventHandler(this.RegistrationForm_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDisplay)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDisplay)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -435,5 +459,7 @@
         private System.Windows.Forms.PictureBox pictureBoxDisplay;
         private System.Windows.Forms.Button btnBrowseImage;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
