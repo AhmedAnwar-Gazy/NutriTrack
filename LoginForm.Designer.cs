@@ -60,7 +60,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(565, 604);
             this.panel3.TabIndex = 8;
-
             // 
             // GoForSignUp
             // 
@@ -211,11 +210,13 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+
         }
 
         #endregion

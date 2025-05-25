@@ -16,7 +16,7 @@ namespace NutriTrack
     {
         public NutrientVisualizationForm()
         {
-            
+            this.WindowState = FormWindowState.Maximized; // يفتح النافذة بحجم متكامل
             InitializeComponent();
             chartOne();
             chartTwo();
@@ -26,14 +26,12 @@ namespace NutriTrack
         }
         private void chartOne()
         {
-            string connstring = "Data Source=DESKTOP-D6ER14M;Initial Catalog=NutriTrack;Integrated Security=True";
+
             string query = "select portion_description, sum(measure_unit_id) as Total from food_portion group by portion_description";
 
-            using (SqlConnection conn = new SqlConnection(connstring))
-            using (SqlCommand cmd = new SqlCommand(query, conn))
-            {
-                conn.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+           
+            
+                using(SqlDataReader reader = DatabaseConnection.Instance.ExecuteReader(query)){
 
                 chart1.Series.Clear();
                 chart1.Series.Add("Series1");
@@ -54,13 +52,10 @@ namespace NutriTrack
          }
         private void chartTwo()
         {
-            string connstring = "Data Source=DESKTOP-D6ER14M;Initial Catalog=NutriTrack;Integrated Security=True";
+            // string connstring = "Data Source=DESKTOP-D6ER14M;Initial Catalog=NutriTrack;Integrated Security=True";
             string query = "select portion_description, sum(measure_unit_id) as Total from food_portion group by portion_description ORDER BY Total";
-            using (SqlConnection conn = new SqlConnection(connstring))
-            using (SqlCommand cmd = new SqlCommand(query, conn))
-            {
-                conn.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+            using(SqlDataReader reader = DatabaseConnection.Instance.ExecuteReader(query)){
+              
                 chart2.Series.Clear();
                 chart2.Series.Add("Series2");
                 chart2.Series["Series2"].Color = System.Drawing.Color.MediumSeaGreen;
@@ -80,14 +75,10 @@ namespace NutriTrack
          }
         private void charThree()
         {
-            string connstring = "Data Source=DESKTOP-D6ER14M;Initial Catalog=NutriTrack;Integrated Security=True";
+          //  string connstring = "Data Source=DESKTOP-D6ER14M;Initial Catalog=NutriTrack;Integrated Security=True";
             string query = "select portion_description, sum(measure_unit_id) as Total from food_portion group by portion_description ORDER BY Total "; 
+            using(SqlDataReader reader = DatabaseConnection.Instance.ExecuteReader(query)){
 
-            using (SqlConnection conn = new SqlConnection(connstring))
-            using (SqlCommand cmd = new SqlCommand(query, conn))
-            {
-                conn.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
                 chart3.Series.Clear();
                 chart3.Series.Add("Series3"); 
                 chart3.Series["Series3"].ChartType = SeriesChartType.Line; 
@@ -114,14 +105,10 @@ namespace NutriTrack
         }
         private void charFour()
         {
-            string connstring = "Data Source=DESKTOP-D6ER14M;Initial Catalog=NutriTrack;Integrated Security=True";
+       //     string connstring = "Data Source=DESKTOP-D6ER14M;Initial Catalog=NutriTrack;Integrated Security=True";
             string query = "select portion_description, sum(measure_unit_id) as Total from food_portion group by portion_description";
 
-            using (SqlConnection conn = new SqlConnection(connstring))
-            using (SqlCommand cmd = new SqlCommand(query, conn))
-            {
-                conn.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+            using(SqlDataReader reader = DatabaseConnection.Instance.ExecuteReader(query)){
                 chart4.Series.Clear();
                 chart4.Series.Add("Series4"); 
                 chart4.Series["Series4"].ChartType = SeriesChartType.Point;
@@ -150,11 +137,7 @@ namespace NutriTrack
             string connstring = "Data Source=DESKTOP-D6ER14M;Initial Catalog=NutriTrack;Integrated Security=True";
             string query = "select portion_description, sum(measure_unit_id) as Total from food_portion group by portion_description";
 
-            using (SqlConnection conn = new SqlConnection(connstring))
-            using (SqlCommand cmd = new SqlCommand(query, conn))
-            {
-                conn.Open();
-                SqlDataReader reader = cmd.ExecuteReader();
+            using(SqlDataReader reader = DatabaseConnection.Instance.ExecuteReader(query)){
 
                 chart6.Series.Clear();
                 chart6.Series.Add("Series6"); 
@@ -190,6 +173,16 @@ namespace NutriTrack
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

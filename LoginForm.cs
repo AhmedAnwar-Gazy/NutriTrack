@@ -12,6 +12,9 @@ namespace NutriTrack
 {
     public partial class LoginForm : Form
     {
+       
+       
+
         public LoginForm()
         {
             InitializeComponent();
@@ -19,9 +22,13 @@ namespace NutriTrack
 
         private void Login_Click(object sender, EventArgs e)
         {
+          
+            
+            //if macIP fond 
             Home home = new Home();
             home.Show();
             this.Hide();
+
         }
 
         private void GoForSignUp_Click(object sender, EventArgs e)
@@ -29,6 +36,11 @@ namespace NutriTrack
             RegistrationForm registrationForm = new RegistrationForm();
             registrationForm.Show();
             this.Hide();
+        }
+
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

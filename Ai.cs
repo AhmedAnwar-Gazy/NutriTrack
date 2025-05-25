@@ -5,10 +5,14 @@ using System.Net.Http;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
+
 using System.Windows.Forms;
+using JsonSerializer = System.Text.Json.JsonSerializer;
+
 namespace NutriTrack
 {
-    public partial class Ai : Form
+    public partial class Ai : UserControl
     {
         
         private const string ApiKey = "AIzaSyChK663OfLl5EXSH7e274JGdcOYZOCPXfw"; // Replace with your actual API key
@@ -115,6 +119,16 @@ namespace NutriTrack
                 
                 txtResponse.Text = $"Error: {ex.Message}";
             }
+        }
+
+        private void Ai_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtPrompt_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
