@@ -64,7 +64,7 @@ namespace NutriTrack
                             SoundPlayer player = new SoundPlayer("C:\\Users\\Lenovo\\RiderProjects\\WinFormsApp3\\WinFormsApp3\\store-scanner-beep-90395.wav");
                             player.Play();
 
-                            NutrientVisualizationForm nu = new NutrientVisualizationForm();
+                            NutrientVisualizationForm nu = new NutrientVisualizationForm("");
                             nu.Show();
                             this.Hide();
 

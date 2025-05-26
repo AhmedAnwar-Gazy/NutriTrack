@@ -93,6 +93,7 @@
             this.ButtonSearchViewNuData.TabIndex = 9;
             this.ButtonSearchViewNuData.Text = "View Nutrition Data";
             this.ButtonSearchViewNuData.UseVisualStyleBackColor = false;
+            this.ButtonSearchViewNuData.Click += new System.EventHandler(this.ButtonSearchViewNuData_Click);
             // 
             // label2
             // 

@@ -61,7 +61,7 @@ namespace NutriTrack
 
         private void ButtonSearchViewNuData_Click(object sender, EventArgs e)
         {
-            NutrientVisualizationForm nutrientVisualizationForm = new NutrientVisualizationForm();
+            NutrientVisualizationForm nutrientVisualizationForm = new NutrientVisualizationForm(SearchTextBox.Text);
             nutrientVisualizationForm.Show();
             this.Hide();
         }

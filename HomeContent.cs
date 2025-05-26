@@ -27,5 +27,12 @@ namespace NutriTrack
             ScanQR qr = new ScanQR();
             qr.Show();
         }
+
+        private void ButtonSearchViewNuData_Click(object sender, EventArgs e)
+        {
+            NutrientVisualizationForm nutrientVisualizationForm = new NutrientVisualizationForm(textBoxSearchHome.Text);
+            nutrientVisualizationForm.Show();
+            this.Hide();
+        }
     }
 }

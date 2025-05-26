@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.contentPanel = new System.Windows.Forms.Panel();
+            this.startbuttonHome = new System.Windows.Forms.Button();
             this.SuggestionsListBox = new System.Windows.Forms.ListBox();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -50,7 +51,6 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
-            this.startbuttonHome = new System.Windows.Forms.Button();
             this.contentPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -79,6 +79,16 @@
             this.contentPanel.Size = new System.Drawing.Size(1370, 609);
             this.contentPanel.TabIndex = 12;
             this.contentPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // startbuttonHome
+            // 
+            this.startbuttonHome.Location = new System.Drawing.Point(301, 440);
+            this.startbuttonHome.Name = "startbuttonHome";
+            this.startbuttonHome.Size = new System.Drawing.Size(76, 34);
+            this.startbuttonHome.TabIndex = 13;
+            this.startbuttonHome.Text = "Scan QR";
+            this.startbuttonHome.UseVisualStyleBackColor = true;
+            this.startbuttonHome.Click += new System.EventHandler(this.startbuttonHome_Click);
             // 
             // SuggestionsListBox
             // 
@@ -353,16 +363,6 @@
             this.button2.Text = "Home";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // startbuttonHome
-            // 
-            this.startbuttonHome.Location = new System.Drawing.Point(301, 440);
-            this.startbuttonHome.Name = "startbuttonHome";
-            this.startbuttonHome.Size = new System.Drawing.Size(76, 34);
-            this.startbuttonHome.TabIndex = 13;
-            this.startbuttonHome.Text = "Scan QR";
-            this.startbuttonHome.UseVisualStyleBackColor = true;
-            this.startbuttonHome.Click += new System.EventHandler(this.startbuttonHome_Click);
             // 
             // Home
             // 
