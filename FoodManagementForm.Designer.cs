@@ -277,11 +277,11 @@
             this.ButtonViewNutrientsFoodManagem.Location = new System.Drawing.Point(40, 402);
             this.ButtonViewNutrientsFoodManagem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.ButtonViewNutrientsFoodManagem.Name = "ButtonViewNutrientsFoodManagem";
-<<<<<<< Updated upstream
+
             this.ButtonViewNutrientsFoodManagem.Size = new System.Drawing.Size(430, 55);
-=======
+
             this.ButtonViewNutrientsFoodManagem.Size = new System.Drawing.Size(369, 45);
->>>>>>> Stashed changes
+
             this.ButtonViewNutrientsFoodManagem.TabIndex = 2;
             this.ButtonViewNutrientsFoodManagem.Text = "View Nutrients";
             this.ButtonViewNutrientsFoodManagem.UseVisualStyleBackColor = false;
@@ -296,11 +296,11 @@
             this.ButtonClearFoodFoodManagem.Location = new System.Drawing.Point(40, 290);
             this.ButtonClearFoodFoodManagem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.ButtonClearFoodFoodManagem.Name = "ButtonClearFoodFoodManagem";
-<<<<<<< Updated upstream
+
             this.ButtonClearFoodFoodManagem.Size = new System.Drawing.Size(430, 55);
-=======
+
             this.ButtonClearFoodFoodManagem.Size = new System.Drawing.Size(369, 45);
->>>>>>> Stashed changes
+
             this.ButtonClearFoodFoodManagem.TabIndex = 1;
             this.ButtonClearFoodFoodManagem.Text = "Clear";
             this.ButtonClearFoodFoodManagem.UseVisualStyleBackColor = false;
