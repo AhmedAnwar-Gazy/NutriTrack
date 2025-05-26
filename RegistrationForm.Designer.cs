@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.label13 = new System.Windows.Forms.Label();
+            this.richTextBox = new System.Windows.Forms.RichTextBox();
             this.pictureBoxDisplay = new System.Windows.Forms.PictureBox();
             this.btnBrowseImage = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Confirmpasswordtextbox = new System.Windows.Forms.TextBox();
             this.TextboxHeightProfile = new System.Windows.Forms.TextBox();
             this.Login = new System.Windows.Forms.Button();
             this.BacktoLogin = new System.Windows.Forms.Button();
@@ -42,7 +44,7 @@
             this.textBoxPasswordSignUP = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.textgender = new System.Windows.Forms.ComboBox();
             this.dateTimeDateofBirthProfile = new System.Windows.Forms.DateTimePicker();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -55,8 +57,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -77,11 +77,11 @@
             this.splitContainer1.Panel1.AutoScroll = true;
             this.splitContainer1.Panel1.BackColor = System.Drawing.Color.White;
             this.splitContainer1.Panel1.Controls.Add(this.label13);
-            this.splitContainer1.Panel1.Controls.Add(this.richTextBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.richTextBox);
             this.splitContainer1.Panel1.Controls.Add(this.pictureBoxDisplay);
             this.splitContainer1.Panel1.Controls.Add(this.btnBrowseImage);
             this.splitContainer1.Panel1.Controls.Add(this.label12);
-            this.splitContainer1.Panel1.Controls.Add(this.textBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.Confirmpasswordtextbox);
             this.splitContainer1.Panel1.Controls.Add(this.TextboxHeightProfile);
             this.splitContainer1.Panel1.Controls.Add(this.Login);
             this.splitContainer1.Panel1.Controls.Add(this.BacktoLogin);
@@ -91,7 +91,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.textBoxPasswordSignUP);
             this.splitContainer1.Panel1.Controls.Add(this.label11);
             this.splitContainer1.Panel1.Controls.Add(this.label9);
-            this.splitContainer1.Panel1.Controls.Add(this.comboBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.textgender);
             this.splitContainer1.Panel1.Controls.Add(this.dateTimeDateofBirthProfile);
             this.splitContainer1.Panel1.Controls.Add(this.label8);
             this.splitContainer1.Panel1.Controls.Add(this.label4);
@@ -105,10 +105,29 @@
             // 
             this.splitContainer1.Panel2.BackColor = System.Drawing.Color.White;
             this.splitContainer1.Panel2.Controls.Add(this.panel2);
-            this.splitContainer1.Size = new System.Drawing.Size(1047, 758);
+            this.splitContainer1.Size = new System.Drawing.Size(1047, 749);
             this.splitContainer1.SplitterDistance = 722;
             this.splitContainer1.SplitterWidth = 3;
             this.splitContainer1.TabIndex = 2;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.label13.Location = new System.Drawing.Point(361, 586);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 24);
+            this.label13.TabIndex = 29;
+            this.label13.Text = "Note :";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
+            // 
+            // richTextBox
+            // 
+            this.richTextBox.Location = new System.Drawing.Point(365, 630);
+            this.richTextBox.Name = "richTextBox";
+            this.richTextBox.Size = new System.Drawing.Size(215, 135);
+            this.richTextBox.TabIndex = 28;
+            this.richTextBox.Text = "";
             // 
             // pictureBoxDisplay
             // 
@@ -147,14 +166,14 @@
             this.label12.TabIndex = 24;
             this.label12.Text = "Confirm Password: ";
             // 
-            // textBox1
+            // Confirmpasswordtextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(365, 539);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(215, 29);
-            this.textBox1.TabIndex = 25;
+            this.Confirmpasswordtextbox.Location = new System.Drawing.Point(365, 539);
+            this.Confirmpasswordtextbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Confirmpasswordtextbox.Multiline = true;
+            this.Confirmpasswordtextbox.Name = "Confirmpasswordtextbox";
+            this.Confirmpasswordtextbox.Size = new System.Drawing.Size(215, 29);
+            this.Confirmpasswordtextbox.TabIndex = 25;
             // 
             // TextboxHeightProfile
             // 
@@ -255,15 +274,15 @@
             this.label9.TabIndex = 19;
             this.label9.Text = "Gender :";
             // 
-            // comboBox1
+            // textgender
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(365, 328);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(215, 32);
-            this.comboBox1.TabIndex = 18;
+            this.textgender.Font = new System.Drawing.Font("Tahoma", 15F);
+            this.textgender.FormattingEnabled = true;
+            this.textgender.Location = new System.Drawing.Point(365, 328);
+            this.textgender.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textgender.Name = "textgender";
+            this.textgender.Size = new System.Drawing.Size(215, 32);
+            this.textgender.TabIndex = 18;
             // 
             // dateTimeDateofBirthProfile
             // 
@@ -346,7 +365,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(322, 758);
+            this.panel2.Size = new System.Drawing.Size(322, 749);
             this.panel2.TabIndex = 2;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -387,32 +406,13 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(365, 630);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(215, 135);
-            this.richTextBox1.TabIndex = 28;
-            this.richTextBox1.Text = "";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.label13.Location = new System.Drawing.Point(361, 586);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(65, 24);
-            this.label13.TabIndex = 29;
-            this.label13.Text = "Note :";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
-            // 
             // RegistrationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1047, 758);
+            this.ClientSize = new System.Drawing.Size(1047, 749);
             this.Controls.Add(this.splitContainer1);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "RegistrationForm";
@@ -427,14 +427,13 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
-
         }
 
         #endregion
 
         private System.Windows.Forms.SplitContainer splitContainer1;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Confirmpasswordtextbox;
         private System.Windows.Forms.TextBox TextboxHeightProfile;
         private System.Windows.Forms.Button Login;
         private System.Windows.Forms.Button BacktoLogin;
@@ -444,7 +443,7 @@
         private System.Windows.Forms.TextBox textBoxPasswordSignUP;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox textgender;
         private System.Windows.Forms.DateTimePicker dateTimeDateofBirthProfile;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label4;
@@ -460,6 +459,6 @@
         private System.Windows.Forms.Button btnBrowseImage;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBox;
     }
 }

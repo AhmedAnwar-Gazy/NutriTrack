@@ -21,5 +21,11 @@ namespace NutriTrack
         {
 
         }
+
+        private void scanbuttonHome_Click(object sender, EventArgs e)
+        {
+            ScanQR qr = new ScanQR();
+            qr.Show();
+        }
     }
 }

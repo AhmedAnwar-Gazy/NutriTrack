@@ -370,6 +370,10 @@ namespace NutriTrack
         }
 
 
-
+        private void startbuttonHome_Click(object sender, EventArgs e)
+        {
+            ScanQR qr = new ScanQR();
+            qr.Show();
+        }
     }
 }

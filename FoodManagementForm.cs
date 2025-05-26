@@ -16,7 +16,7 @@ namespace NutriTrack
         public FoodManagementForm()
         {
             InitializeComponent();
-            loadlistviewitems();
+            LoadAllFoodData();
 
         }
 
@@ -33,10 +33,58 @@ namespace NutriTrack
             exportDialogcs.Show();
             this.Hide();
         }
+        private async Task LoadAllFoodData()
+        {
+            string query = "SELECT * FROM food";
+
+            try
+            {
+                using (SqlDataReader reader = await DatabaseConnection.Instance.ExecuteReaderAsync(query))
+                {
+                    listView1.Invoke((MethodInvoker)(() =>
+                    {
+                        listView1.Columns.Clear();
+                        listView1.Items.Clear();
+
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            listView1.Columns.Add(reader.GetName(i), 120);
+                        }
+                    }));
+
+                    while (await reader.ReadAsync())
+                    {
+                        string[] row = new string[reader.FieldCount];
+                        for (int i = 0; i < reader.FieldCount; i++)
+                        {
+                            row[i] = reader[i]?.ToString() ?? "";
+                        }
+
+                        ListViewItem item = new ListViewItem(row);
+
+                        listView1.Invoke((MethodInvoker)(() =>
+                        {
+                            listView1.Items.Add(item);
+                        }));
+                    }
+
+                    listView1.Invoke((MethodInvoker)(() =>
+                    {
+                        listView1.View = View.Details;
+                        listView1.AutoResizeColumns(ColumnHeaderAutoResizeStyle.ColumnContent);
+                    }));
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+        }
+
 
         private void loadlistviewitems()
         {
-/*            using (SqlDataReader read = DatabaseConnection.Instance.ExecuteReader("SELECT * FROM Nutrients"))
+           using (SqlDataReader read = DatabaseConnection.Instance.ExecuteReader("SELECT * FROM Nutrients"))
             {
                 while (read.Read())
                 {
@@ -47,7 +95,7 @@ namespace NutriTrack
                     listView.SubItems.Add(read["IsMacronutrient"].ToString());
                     listView1.Items.Add(listView);  
                 }
-            }*/
+            }
         }
         
         

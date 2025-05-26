@@ -72,7 +72,7 @@ namespace NutriTrack
             this.btnAsk.TabIndex = 2;
             this.btnAsk.Text = "ASK";
             this.btnAsk.UseVisualStyleBackColor = false;
-            this.btnAsk.Click += new System.EventHandler(this.btnAsk_Click_1);
+              this.btnAsk.Click += new System.EventHandler(this.btnAsk_Click);
             // 
             // Ai
             // 

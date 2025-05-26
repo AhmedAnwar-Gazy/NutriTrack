@@ -15,7 +15,7 @@ namespace NutriTrack
 
         private DatabaseConnection()
         {
-            connectionString = "Server=.\\SQLEXPRESS;Database=NUTRITRACK;Pooling=true;Max Pool Size=100;Integrated Security=SSPI;TrustServerCertificate=True";
+            connectionString = "Server=.\\SQLEXPRESS;Database=NitriTrak;Pooling=true;Max Pool Size=100;Integrated Security=SSPI;TrustServerCertificate=True";
         }
 
         public static DatabaseConnection Instance => _instance.Value;

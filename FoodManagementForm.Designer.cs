@@ -95,15 +95,9 @@
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-<<<<<<< Updated upstream
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1903, 1500);
-=======
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1563, 1219);
->>>>>>> Stashed changes
             this.panel2.TabIndex = 7;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -111,14 +105,8 @@
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-<<<<<<< Updated upstream
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(330, 1500);
-=======
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(283, 1219);
->>>>>>> Stashed changes
             this.panel1.TabIndex = 7;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
@@ -132,17 +120,10 @@
             this.panel3.Controls.Add(this.panel4);
             this.panel3.Controls.Add(this.listView1);
             this.panel3.Controls.Add(this.label2);
-<<<<<<< Updated upstream
             this.panel3.Location = new System.Drawing.Point(355, 97);
             this.panel3.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(1393, 1376);
-=======
-            this.panel3.Location = new System.Drawing.Point(304, 79);
-            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1194, 1118);
->>>>>>> Stashed changes
             this.panel3.TabIndex = 6;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
@@ -178,17 +159,10 @@
             this.panel5.Controls.Add(this.ButtonViewNutrientsFoodManagem);
             this.panel5.Controls.Add(this.ButtonClearFoodFoodManagem);
             this.panel5.Controls.Add(this.ButtonAddFoodFoodManagem);
-<<<<<<< Updated upstream
             this.panel5.Location = new System.Drawing.Point(736, 612);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(509, 702);
-=======
-            this.panel5.Location = new System.Drawing.Point(631, 497);
-            this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(437, 571);
->>>>>>> Stashed changes
             this.panel5.TabIndex = 8;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
@@ -202,11 +176,7 @@
             this.ButtonLogoutFoodManagem.Location = new System.Drawing.Point(40, 562);
             this.ButtonLogoutFoodManagem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.ButtonLogoutFoodManagem.Name = "ButtonLogoutFoodManagem";
-<<<<<<< Updated upstream
             this.ButtonLogoutFoodManagem.Size = new System.Drawing.Size(430, 55);
-=======
-            this.ButtonLogoutFoodManagem.Size = new System.Drawing.Size(369, 45);
->>>>>>> Stashed changes
             this.ButtonLogoutFoodManagem.TabIndex = 6;
             this.ButtonLogoutFoodManagem.Text = "Logout";
             this.ButtonLogoutFoodManagem.UseVisualStyleBackColor = false;
@@ -220,11 +190,7 @@
             this.ButtonExportDataFoodManagem.Location = new System.Drawing.Point(40, 487);
             this.ButtonExportDataFoodManagem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.ButtonExportDataFoodManagem.Name = "ButtonExportDataFoodManagem";
-<<<<<<< Updated upstream
             this.ButtonExportDataFoodManagem.Size = new System.Drawing.Size(430, 55);
-=======
-            this.ButtonExportDataFoodManagem.Size = new System.Drawing.Size(369, 45);
->>>>>>> Stashed changes
             this.ButtonExportDataFoodManagem.TabIndex = 5;
             this.ButtonExportDataFoodManagem.Text = "Export Data";
             this.ButtonExportDataFoodManagem.UseVisualStyleBackColor = false;
@@ -239,11 +205,7 @@
             this.ButtonUpdateFoodFoodManagem.Location = new System.Drawing.Point(40, 135);
             this.ButtonUpdateFoodFoodManagem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.ButtonUpdateFoodFoodManagem.Name = "ButtonUpdateFoodFoodManagem";
-<<<<<<< Updated upstream
             this.ButtonUpdateFoodFoodManagem.Size = new System.Drawing.Size(430, 55);
-=======
-            this.ButtonUpdateFoodFoodManagem.Size = new System.Drawing.Size(369, 45);
->>>>>>> Stashed changes
             this.ButtonUpdateFoodFoodManagem.TabIndex = 4;
             this.ButtonUpdateFoodFoodManagem.Text = "UpdateFood";
             this.ButtonUpdateFoodFoodManagem.UseVisualStyleBackColor = false;
@@ -258,11 +220,7 @@
             this.ButtonDeleteFoodFoodManagem.Location = new System.Drawing.Point(40, 213);
             this.ButtonDeleteFoodFoodManagem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.ButtonDeleteFoodFoodManagem.Name = "ButtonDeleteFoodFoodManagem";
-<<<<<<< Updated upstream
             this.ButtonDeleteFoodFoodManagem.Size = new System.Drawing.Size(430, 55);
-=======
-            this.ButtonDeleteFoodFoodManagem.Size = new System.Drawing.Size(369, 45);
->>>>>>> Stashed changes
             this.ButtonDeleteFoodFoodManagem.TabIndex = 3;
             this.ButtonDeleteFoodFoodManagem.Text = "Delete Food";
             this.ButtonDeleteFoodFoodManagem.UseVisualStyleBackColor = false;
@@ -277,11 +235,7 @@
             this.ButtonViewNutrientsFoodManagem.Location = new System.Drawing.Point(40, 402);
             this.ButtonViewNutrientsFoodManagem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.ButtonViewNutrientsFoodManagem.Name = "ButtonViewNutrientsFoodManagem";
-
             this.ButtonViewNutrientsFoodManagem.Size = new System.Drawing.Size(430, 55);
-
-            this.ButtonViewNutrientsFoodManagem.Size = new System.Drawing.Size(369, 45);
-
             this.ButtonViewNutrientsFoodManagem.TabIndex = 2;
             this.ButtonViewNutrientsFoodManagem.Text = "View Nutrients";
             this.ButtonViewNutrientsFoodManagem.UseVisualStyleBackColor = false;
@@ -296,11 +250,7 @@
             this.ButtonClearFoodFoodManagem.Location = new System.Drawing.Point(40, 290);
             this.ButtonClearFoodFoodManagem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.ButtonClearFoodFoodManagem.Name = "ButtonClearFoodFoodManagem";
-
             this.ButtonClearFoodFoodManagem.Size = new System.Drawing.Size(430, 55);
-
-            this.ButtonClearFoodFoodManagem.Size = new System.Drawing.Size(369, 45);
-
             this.ButtonClearFoodFoodManagem.TabIndex = 1;
             this.ButtonClearFoodFoodManagem.Text = "Clear";
             this.ButtonClearFoodFoodManagem.UseVisualStyleBackColor = false;
@@ -317,11 +267,7 @@
             this.ButtonAddFoodFoodManagem.Location = new System.Drawing.Point(40, 53);
             this.ButtonAddFoodFoodManagem.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.ButtonAddFoodFoodManagem.Name = "ButtonAddFoodFoodManagem";
-<<<<<<< Updated upstream
             this.ButtonAddFoodFoodManagem.Size = new System.Drawing.Size(430, 55);
-=======
-            this.ButtonAddFoodFoodManagem.Size = new System.Drawing.Size(369, 45);
->>>>>>> Stashed changes
             this.ButtonAddFoodFoodManagem.TabIndex = 0;
             this.ButtonAddFoodFoodManagem.Text = "Add Food";
             this.ButtonAddFoodFoodManagem.UseVisualStyleBackColor = false;
@@ -356,17 +302,10 @@
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label4);
             this.panel4.Controls.Add(this.label3);
-<<<<<<< Updated upstream
             this.panel4.Location = new System.Drawing.Point(58, 612);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(628, 702);
-=======
-            this.panel4.Location = new System.Drawing.Point(37, 497);
-            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(552, 680);
->>>>>>> Stashed changes
             this.panel4.TabIndex = 7;
             // 
             // label15
@@ -649,11 +588,7 @@
             this.listView1.Location = new System.Drawing.Point(58, 132);
             this.listView1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.listView1.Name = "listView1";
-<<<<<<< Updated upstream
             this.listView1.Size = new System.Drawing.Size(1187, 463);
-=======
-            this.listView1.Size = new System.Drawing.Size(1018, 377);
->>>>>>> Stashed changes
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -736,15 +671,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.Controls.Add(this.panel2);
-<<<<<<< Updated upstream
             this.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.Name = "FoodManagementForm";
             this.Size = new System.Drawing.Size(1903, 703);
-=======
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "FoodManagementForm";
-            this.Size = new System.Drawing.Size(1563, 571);
->>>>>>> Stashed changes
             this.Load += new System.EventHandler(this.FoodManagementForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);

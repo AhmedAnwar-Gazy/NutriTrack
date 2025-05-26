@@ -50,6 +50,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
+            this.startbuttonHome = new System.Windows.Forms.Button();
             this.contentPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -64,6 +65,7 @@
             // contentPanel
             // 
             this.contentPanel.BackColor = System.Drawing.Color.White;
+            this.contentPanel.Controls.Add(this.startbuttonHome);
             this.contentPanel.Controls.Add(this.SuggestionsListBox);
             this.contentPanel.Controls.Add(this.SearchTextBox);
             this.contentPanel.Controls.Add(this.label4);
@@ -74,7 +76,7 @@
             this.contentPanel.Location = new System.Drawing.Point(0, 0);
             this.contentPanel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.contentPanel.Name = "contentPanel";
-            this.contentPanel.Size = new System.Drawing.Size(1518, 609);
+            this.contentPanel.Size = new System.Drawing.Size(1370, 609);
             this.contentPanel.TabIndex = 12;
             this.contentPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -352,12 +354,22 @@
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // startbuttonHome
+            // 
+            this.startbuttonHome.Location = new System.Drawing.Point(301, 440);
+            this.startbuttonHome.Name = "startbuttonHome";
+            this.startbuttonHome.Size = new System.Drawing.Size(76, 34);
+            this.startbuttonHome.TabIndex = 13;
+            this.startbuttonHome.Text = "Scan QR";
+            this.startbuttonHome.UseVisualStyleBackColor = true;
+            this.startbuttonHome.Click += new System.EventHandler(this.startbuttonHome_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(1518, 609);
+            this.ClientSize = new System.Drawing.Size(1370, 609);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.contentPanel);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -376,8 +388,9 @@
             this.panel5.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
-
         }
+
+        private System.Windows.Forms.Button startbuttonHome;
 
         private System.Windows.Forms.Button button1;
 

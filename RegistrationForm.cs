@@ -7,21 +7,56 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Json.More;
+using MyNamespace;
 
 namespace NutriTrack
 {
     public partial class RegistrationForm : Form
     {
+        private string imagePath;
         public RegistrationForm()
         {
             InitializeComponent();
         }
 
-        private void Login_Click(object sender, EventArgs e)
+        private async void  Login_Click(object sender, EventArgs e)
         {
-            Home home = new Home();
-            home.Show();
-            this.Hide();
+            // Home home = new Home();
+            // home.Show();
+            // this.Hide();
+            string username = textBoxUserNameSignUp.Text;
+            string email = textBoxEmailSignUP.Text;
+            string password = textBoxPasswordSignUP.Text;
+            DateTime birthDate = dateTimeDateofBirthProfile.Value;
+            // string height = TextboxHeightProfile.Text;
+            if (!decimal.TryParse(TextboxWeightProfile.Text, out decimal weight))
+            {
+                MessageBox.Show("Please enter a valid weight (e.g., 65.5).");
+                return;
+            }
+            if (!decimal.TryParse(TextboxWeightProfile.Text, out decimal height))
+            {
+                MessageBox.Show("Please enter a valid weight (e.g., 65.5).");
+                return;
+            }
+            string gender = textgender.Text;
+            string note = richTextBox.Text;
+            
+            UserService user = new UserService();
+          bool UserRegister= await user.RegisterUserAsync(username, email, password, MacAddresses.FirstMac, imagePath,birthDate,gender,weight,height,note);
+          if (UserRegister)
+          {
+              ToastFormcs toast = new ToastFormcs("SUCCESS","You are register successfully,please go to login");
+              toast.Show();
+              this.Hide();
+              LoginForm login = new LoginForm();
+              login.Show();
+              
+          }
+          
+            
+            
         }
 
         private void BacktoLogin_Click(object sender, EventArgs e)
@@ -65,7 +100,7 @@ namespace NutriTrack
                 try
                 {
                     // Get the selected file path
-                    string imagePath = openFileDialog1.FileName;
+                     imagePath = openFileDialog1.FileName;
 
                     // Load the image from the selected path
                     // Use Image.FromFile to create an Image object from the file
